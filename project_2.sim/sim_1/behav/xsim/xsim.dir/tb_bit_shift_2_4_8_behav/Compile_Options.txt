@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "tb_bit_shift_2_4_8_behav" "xil_defaultlib.tb_bit_shift_2_4_8" -log "elaborate.log" 

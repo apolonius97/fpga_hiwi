@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_bit_shift_2_4_8_behav/xsimk -simmode gui -wdb tb_bit_shift_2_4_8_behav.wdb -simrunnum 0 -socket 43929
+Design successfully loaded
+Design Loading Memory Usage: 29100 KB (Peak: 29700 KB)
+Design Loading CPU Usage: 60 ms
+Simulation completed
+Simulation Memory Usage: 110836 KB (Peak: 168368 KB)
+Simulation CPU Usage: 60 ms

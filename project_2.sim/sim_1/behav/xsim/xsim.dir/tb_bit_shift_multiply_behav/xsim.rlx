@@ -1,0 +1,12 @@
+
+{ 
+    crc :  3789893876027045598  , 
+    ccp_crc :  0  , 
+    cmdline : " --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_bit_shift_multiply_behav xil_defaultlib.tb_bit_shift_multiply" , 
+    buildDate : "Oct 14 2022" , 
+    buildTime : "05:07:14" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/tb_bit_shift_multiply_behav/xsimk\"   \"xsim.dir/tb_bit_shift_multiply_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/tb_bit_shift_multiply_behav/obj/xsim_1.lnx64.o\" -L\"/tools/Xilinx/Vivado/2022.2/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
