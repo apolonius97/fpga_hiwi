@@ -38,7 +38,8 @@ entity signed_lead_count_log2 is
     Port ( clk : in std_logic;
            rst : in std_logic;
            i_data : in signed(23 downto 0);
-           o_data : out integer
+           o_data_lead : out integer,
+            o_data_frac : out unsigned(18 downto 0)
            );
 end signed_lead_count_log2;
 
@@ -48,14 +49,20 @@ architecture rtl of signed_lead_count_log2 is
    
 begin
     process(clk) is
+    --general variables
         variable i_data_signed : signed(23 downto 0);
         variable i_data_unsigned : unsigned(22 downto 0);
+    --end general variables
+    --lead variables
         variable l2 : integer; -- given in the python_simulations
         variable x : unsigned(47 downto 0); -- the input value which will be multiplied over and over
         variable x_multiplied : unsigned(47 downto 0); --the result of multiplication with 2 (x bit shifted
         variable x_shifted: unsigned(47 downto 0);
         variable x_zero : unsigned(47 downto 0) := (others=>'0');
-        variable x_m_fraction : unsigned
+    --end lead variables
+    --fraction variables 
+        variable y : unsigned(
+    --end fraction variables
     begin
         
         if rising_edge(clk) then
@@ -101,7 +108,7 @@ begin
                                     
                              end loop;
                             -- end loop                              
-                                o_data <= l2;
+                                o_data_lead <= l2;
                          end if;
                         
                         
