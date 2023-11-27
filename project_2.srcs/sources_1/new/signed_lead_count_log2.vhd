@@ -55,6 +55,7 @@ begin
         variable x_multiplied : unsigned(47 downto 0); --the result of multiplication with 2 (x bit shifted
         variable x_shifted: unsigned(47 downto 0);
         variable x_zero : unsigned(47 downto 0) := (others=>'0');
+        variable x_m_fraction : unsigned
     begin
         
         if rising_edge(clk) then
@@ -75,7 +76,11 @@ begin
                 else
                     i_data_unsigned := unsigned(i_data(22 downto 0));
                 end if;
-                
+                    
+--------------------------------------------------------------------------------------------------------------------------------------------                    
+                --the leading bit part of the program--
+                -----------------------------------------------------------------------------
+                    
                 x := (47 downto i_data_unsigned'length => '0') & i_data_unsigned;         --load x with the input and pad with '0's
                 x_test <= x;                                             -- just for checking
 
@@ -102,7 +107,8 @@ begin
                         
                        
                     end if;
-                         
+-------------------------------------------------------------------------------------------------------------
+                        --END OF LEAD----------------------------------------------------
                      
             end if;
 
