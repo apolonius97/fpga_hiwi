@@ -34,7 +34,7 @@ use ieee.fixed_pkg.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity signed_lead_count_log2 is
+entity fixed_lead_frac is
     Port ( clk : in std_logic;
            rst : in std_logic;
            i_data : in signed(23 downto 0);
@@ -42,9 +42,9 @@ entity signed_lead_count_log2 is
             --o_data_frac : out unsigned(18 downto 0);
             o_data_total : out ufixed(4 downto -19)
            );
-end signed_lead_count_log2;
+end fixed_lead_frac;
 
-architecture rtl of signed_lead_count_log2 is
+architecture rtl of fixed_lead_frac is
     signal x_test : unsigned(47 downto 0);
     signal l2_test : unsigned(4 downto 0);
    
