@@ -40,13 +40,15 @@ entity signed_lead_count_log2 is
            i_data : in signed(23 downto 0);
            o_data : out integer;
             --o_data_frac : out unsigned(18 downto 0);
-            o_data_total : out ufixed(4 downto -19)
+            o_data_total : out ufixed(4 downto -19);
+            o_data_test : out ufixed(4 downto 0)
+
            );
 end signed_lead_count_log2;
 
 architecture rtl of signed_lead_count_log2 is
     signal x_test : unsigned(47 downto 0);
-    signal l2_test : unsigned(4 downto 0);
+    signal l2_test : ufixed(4 downto 0) := (others=> '0');
    
 begin
     process(clk) is
@@ -113,9 +115,10 @@ begin
                              end loop;
                             -- end loop 
                                 l2_u := to_ufixed(l2, 4);                             
-                                o_data <= l2;
-                                o_data_total(4 downto 0) <= l2_u;
-                                
+                                o_data <= l2; --integer, richtige antwort
+                                o_data_total(4 downto 0) <= l2_u; --ufixed, wrong answer
+                                l2_test <= ufixed(l2_u);
+                                --o_data_test <= l2_test;
                          end if;
                         
                         
@@ -129,4 +132,17 @@ begin
        end if;
        
     end process;
+    -------to delete
+    process(clk) is
+    begin
+        if falling_edge(clk) then
+            if rst = '0' then
+                o_data_test <= "00000";
+            else
+                o_data_test <= "11111";
+        end if;   
+                end if;
+                     
+    end process;
+    ---------up to here
 end rtl;

@@ -314,3 +314,1671 @@ INFO: [Simtcl 6-16] Simulation closed
 set_property file_type {VHDL 2008} [get_files  /home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd]
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd w ]
+add_files -fileset sim_1 /home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd
+update_compile_order -fileset sim_1
+set_property top tb_fixed_lead_frac [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+set_property top fixed_lead_frac [current_fileset]
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7f35264ab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7f35264afa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f3524c29d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f3524c29e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7f39acaab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7f39acaafa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f39ab229d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f39ab229e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7f52b54ab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7f52b54afa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f52b3c29d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f52b3c29e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7f0b7acab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7f0b7acafa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f0b79429d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f0b79429e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7f1c226ab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7f1c226afa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f1c20e29d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f1c20e29e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7efcb3aab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7efcb3aafa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7efcb2229d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7efcb2229e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7f0a19eab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7f0a19eafa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f0a18629d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f0a18629e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7f1efa0ab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7f1efa0afa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f1ef8829d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f1ef8829e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7f18ab2ab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7f18ab2afa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f18a9a29d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f18a9a29e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7fa9a3cab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7fa9a3cafa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7fa9a2429d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7fa9a2429e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+ERROR: [VRFC 10-4982] syntax error near ')' [/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd:62]
+ERROR: [VRFC 10-9458] unit 'test' is ignored due to previous errors [/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd:41]
+INFO: [VRFC 10-8704] VHDL file '/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7f09c18ab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7f09c18afa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f09c0029d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f09c0029e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7fa9e9cab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7fa9e9cafa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7fa9e8429d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7fa9e8429e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+set_property top tb_signed_lead_count_log2 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top signed_lead_count_log2 [current_fileset]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_signed_lead_count_log2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signed_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_signed_lead_count_log2'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
+Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
+Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
+Built simulation snapshot tb_signed_lead_count_log2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_signed_lead_count_log2_behav -key {Behavioral:sim_1:Functional:tb_signed_lead_count_log2} -tclbatch {tb_signed_lead_count_log2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_signed_lead_count_log2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_signed_lead_count_log2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7518.215 ; gain = 57.824 ; free physical = 16781 ; free virtual = 24824
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top tb_fixed_lead_frac [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top fixed_lead_frac [current_fileset]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fixed_lead_frac' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x832e2a]
+[1] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88361d]
+[2] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883c47]
+[3] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x883f27]
+[4] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x88412b]
+[5] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::TraverseArray(Verific::Array const*)+0x3d) [0x7fa71f6ab48d]
+[6] /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/libxsimverific.so(Verific::VhdlVisitor::Visit(Verific::VhdlPackageBody&)+0x5e) [0x7fa71f6afa5e]
+[7] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87ac0d]
+[8] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x878b70]
+[9] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x8788be]
+[10] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x87a655]
+[11] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x881f0b]
+[12] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x83552d]
+[13] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x54346e]
+[14] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x5564a0]
+[15] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x4e0094]
+[16] /lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7fa71de29d90]
+[17] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7fa71de29e40]
+[18] /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab() [0x541147]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+set_property top signed_lead_count_log2 [current_fileset]
+set_property top tb_signed_lead_count_log2 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_signed_lead_count_log2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signed_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_signed_lead_count_log2'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
+Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
+Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
+Built simulation snapshot tb_signed_lead_count_log2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_signed_lead_count_log2_behav -key {Behavioral:sim_1:Functional:tb_signed_lead_count_log2} -tclbatch {tb_signed_lead_count_log2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_signed_lead_count_log2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_signed_lead_count_log2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 7597.262 ; gain = 47.824 ; free physical = 16734 ; free virtual = 24779
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signed_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_signed_lead_count_log2'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
+Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
+Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
+Built simulation snapshot tb_signed_lead_count_log2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7613.277 ; gain = 0.000 ; free physical = 16735 ; free virtual = 24780
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7613.277 ; gain = 0.000 ; free physical = 16729 ; free virtual = 24775
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signed_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_signed_lead_count_log2'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
+Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
+Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
+Built simulation snapshot tb_signed_lead_count_log2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 7619.281 ; gain = 4.992 ; free physical = 16697 ; free virtual = 24742
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_signed_lead_count_log2'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [Common 17-344] 'execute_script' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+INFO: [Common 17-344] 'relaunch_sim' was cancelled
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_signed_lead_count_log2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
+Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
+Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
+Built simulation snapshot tb_signed_lead_count_log2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_signed_lead_count_log2_behav -key {Behavioral:sim_1:Functional:tb_signed_lead_count_log2} -tclbatch {tb_signed_lead_count_log2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_signed_lead_count_log2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_signed_lead_count_log2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7629.281 ; gain = 1.988 ; free physical = 16696 ; free virtual = 24742
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_signed_lead_count_log2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signed_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/bit_shift2_4_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bit_shift2_4_8'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/bit_shift_multiply.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bit_shift_multiply'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_signed_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_fixed_lead_frac.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_fixed_lead_frac'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_bit_shift_multiply.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bit_shift_multiply'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_bit_shift_2_4_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_bit_shift_2_4_8'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
+Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
+Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
+Built simulation snapshot tb_signed_lead_count_log2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_signed_lead_count_log2_behav -key {Behavioral:sim_1:Functional:tb_signed_lead_count_log2} -tclbatch {tb_signed_lead_count_log2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_signed_lead_count_log2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_signed_lead_count_log2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7726.328 ; gain = 3.988 ; free physical = 16661 ; free virtual = 24707
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signed_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_signed_lead_count_log2'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
+Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
+Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
+Built simulation snapshot tb_signed_lead_count_log2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7742.348 ; gain = 0.000 ; free physical = 16646 ; free virtual = 24692
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_signed_lead_count_log2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_signed_lead_count_log2_behav -key {Behavioral:sim_1:Functional:tb_signed_lead_count_log2} -tclbatch {tb_signed_lead_count_log2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_signed_lead_count_log2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_signed_lead_count_log2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 7742.348 ; gain = 0.000 ; free physical = 16606 ; free virtual = 24652
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 7742.348 ; gain = 0.000 ; free physical = 16613 ; free virtual = 24659
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_signed_lead_count_log2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signed_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_signed_lead_count_log2'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
+Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
+Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
+Built simulation snapshot tb_signed_lead_count_log2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_signed_lead_count_log2_behav -key {Behavioral:sim_1:Functional:tb_signed_lead_count_log2} -tclbatch {tb_signed_lead_count_log2.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_signed_lead_count_log2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_signed_lead_count_log2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7752.344 ; gain = 5.000 ; free physical = 16631 ; free virtual = 24677
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signed_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_signed_lead_count_log2'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
+Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
+Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
+Built simulation snapshot tb_signed_lead_count_log2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 7752.344 ; gain = 0.000 ; free physical = 16558 ; free virtual = 24609
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signed_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_signed_lead_count_log2'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
+Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
+Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
+Built simulation snapshot tb_signed_lead_count_log2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+ERROR: Array sizes do not match, left array has 5 elements, right array has 6 elements
+Time: 105 ns  Iteration: 0  Process: /tb_signed_lead_count_log2/dut/line__54
+  File: /home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd
+
+HDL Line: /home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd:117
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7794.367 ; gain = 6.992 ; free physical = 16482 ; free virtual = 24535
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signed_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_signed_lead_count_log2'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
+Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
+Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
+Built simulation snapshot tb_signed_lead_count_log2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+ERROR: Array sizes do not match, left array has 5 elements, right array has 6 elements
+Time: 105 ns  Iteration: 0  Process: /tb_signed_lead_count_log2/dut/line__54
+  File: /home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd
+
+HDL Line: /home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd:117
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7802.367 ; gain = 0.000 ; free physical = 16500 ; free virtual = 24553
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj tb_signed_lead_count_log2_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'signed_lead_count_log2'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_signed_lead_count_log2'
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_signed_lead_count_log2'
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
+Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
+Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
+Built simulation snapshot tb_signed_lead_count_log2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7826.383 ; gain = 2.992 ; free physical = 16512 ; free virtual = 24564
+close_sim
+INFO: [Simtcl 6-16] Simulation closed

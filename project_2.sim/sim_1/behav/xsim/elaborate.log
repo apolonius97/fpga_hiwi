@@ -11,6 +11,9 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.math_real
 Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
 Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
 Built simulation snapshot tb_signed_lead_count_log2_behav
