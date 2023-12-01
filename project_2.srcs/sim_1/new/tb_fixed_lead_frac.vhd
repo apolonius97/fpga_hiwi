@@ -68,33 +68,29 @@ begin
     process begin
        
       wait until (rst = '1');
-     i_data <= "000000000000001110000001";
-      wait for 30ns;
-     i_data <= "111111111111111110001000";
-      wait for 30ns;
-      i_data <= "100000000000000000000000";
-      wait for 30ns;
-      wait for 30ns;
+
+     --i_data <= "111111111111111110001000";
+     -- wait for 30ns;
+    --  i_data <= "100000000000000000000000";
+    --  wait for 30ns;
         i_data <= "000000000000000001111000";
 
     wait for 30ns;
 
-     wait for 30ns;
-        i_data <= "000011110000000001111000";
+     --wait for 30ns;
+     --   i_data <= "000011110000000001111000";
 
-  wait for 30ns;
-          wait for 30ns;
-       i_data <= "001000000000000001111000";
+  --wait for 30ns;
+--       i_data <= "001000000000000001111000";
 
 
-     wait for 30ns;
 
-      wait for 30ns;
-      i_data <= "000011110000000001111000";
-       wait for 30ns;
-     i_data <= "011000000000000001111000";
+  --    wait for 30ns;
+  --    i_data <= "000011110000000001111000";
+  --     wait for 30ns;
+  --   i_data <= "011000000000000001111000";
 
-  wait for 30ns;
+ -- wait for 30ns;
     end process stimulus;
 
 

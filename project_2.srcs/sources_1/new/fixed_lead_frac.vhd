@@ -50,13 +50,21 @@ entity fixed_lead_frac is
 end fixed_lead_frac;
 
 architecture rtl of fixed_lead_frac is
-    signal x_test : unsigned(47 downto 0);
+    signal x_test : unsigned(22 downto 0);
     signal l2_test : ufixed(4 downto 0) := (others=> '0');
-        signal frac_sig : ufixed(-1 downto -19);
 
-    signal x_final_test : unsigned(47 downto 0);
-    signal x_read_test : unsigned(47 downto 0);
+    signal x_final_test : unsigned(23 downto 0);
+    signal x_read_test : unsigned(22 downto 0);
    signal y_test : unsigned(72 downto 0) := (others => '0');
+   signal y_multiplied_sig: unsigned(45 downto 0) := (others => '0');
+   signal y_shifted2_sig : unsigned(1 downto 0) := (others => '0');
+      signal y_shifted1_sig : unsigned(23 downto 0) := (others => '0');
+              signal frac_sig : ufixed(0 downto -19) := (others => '0');
+        signal frac_shifted_sig : ufixed(-1 downto -19) := (others => '0');
+        signal frac_sum_sig : ufixed(-1 downto -19) := (others => '0');
+        signal y_start_sig : unsigned(22 downto 0) := (others => '0');
+
+
 begin
 
 
@@ -68,36 +76,33 @@ begin
     --end general variables
     --lead variables
         variable l2 : integer; -- given in the python_simulations
-        variable x : unsigned(47 downto 0); -- the input value which will be multiplied over and over
-        variable x_multiplied : unsigned(47 downto 0); --the result of multiplication with 2 (x bit shifted
-        variable x_shifted: unsigned(47 downto 0);
-        variable x_zero : unsigned(47 downto 0) := (others=>'0');
+        variable x : unsigned(45 downto 0); -- the input value which will be multiplied over and over
+        variable x_multiplied : unsigned(45 downto 0); --the result of multiplication with 2 (x bit shifted
+        variable x_shifted: unsigned(45 downto 0);
+        variable x_zero : unsigned(45 downto 0) := (others=>'0');
         variable l2_u : ufixed(4 downto 0);
-        variable x_read : unsigned(47 downto 0);
-        variable x_final : unsigned(47 downto 0);
+        variable x_read : unsigned(22 downto 0);
+        variable x_final : unsigned(22 downto 0);
     --end lead variables
     --fraction variables 
         
-        variable y_start : unsigned(47 downto 0);
-        variable y_new: unsigned(47 downto 0);
-        variable y_new1: unsigned(72 downto 0);
-        variable y_multiplied : unsigned(95 downto 0);  
-        variable y_multi_shifted: unsigned (72 downto 0);      
-        variable y_shifted : unsigned(73 downto 0);
+        variable y_start : unsigned(22 downto 0);
+        variable y_new: unsigned(23 downto 0);
+                variable y_new3: unsigned(22 downto 0);
+
+        variable y_multiplied : unsigned(47 downto 0);  
+        variable y_shifted1 : unsigned(25 downto 0);
         variable y_two : unsigned(1 downto 0) := "10";
-        variable y_divided : unsigned(72 downto 0);
-        variable y_divided_long : unsigned(72 downto 0);
+        variable y_shifted1_int : integer;
+        variable y_shifted2 : integer;
+variable y_new2: unsigned(23 downto 0);
+
         
-        variable y_start_i : integer := 0;
-        variable y_new_i : integer := 0;
-        variable y_shifted_i : integer := 0;
-        variable y_multiplied_i : integer := 0;
-        variable y_divided_i : integer := 0;
+
         
-        
-        variable frac : ufixed(0 downto -19);
-        variable frac_shifted : ufixed(-1 downto -19);
-        variable frac_sum : ufixed(-1 downto -19) := (others => '0');
+        variable frac : ufixed(0 downto -19) := (others =>'0');
+        variable frac_shifted : ufixed(-1 downto -19):= (others => '0');
+        variable frac_sum : ufixed(-1 downto -19):= (others => '0');
         variable l2_and_frac: ufixed(4 downto -19);
         
     --    variable y
@@ -131,20 +136,20 @@ begin
                 --the leading bit part of the program--
                 -----------------------------------------------------------------------------
                     
-                x := (47 downto i_data_unsigned'length => '0') & i_data_unsigned;         --load x with the input and pad with '0's
+                x := (45 downto i_data_unsigned'length => '0') & i_data_unsigned;         --load x with the input and pad with '0's
                 --x_array(23) <= x;                                             -- just for checking
 
                     if x > 0 then                                       --if input is greater than '0'
-                       x_shifted := shift_right(unsigned(x), 23); 
+                       x_shifted := shift_right(unsigned(x), 22); 
                               -- shift the input by 23 to the right
                         if x_shifted = x_zero then
                              
                          -- loop for calculating l2                                       
-                            for i in 22 downto 0 loop                            
-                                 x := x(46 downto 0) & '0';
+                            for i in 21 downto 0 loop                            
+                                 x := x(44 downto 0) & '0';
                                  l2 := i;
                                  
-                                 x_shifted := shift_right(unsigned(x), 23);
+                                 x_shifted := shift_right(unsigned(x), 22);
                                  
                                     if x_shifted > x_zero then                                        
                                         exit;
@@ -153,7 +158,7 @@ begin
                              end loop;
                             -- end loop 
 
-                                    x_final := '0' & x(47 downto 1);
+                                    x_final := x(22 downto 0);
                                     x_read_test <= x_final;
                                     l2_u := to_ufixed(l2, 4);                             
                                     o_data <= l2; 
@@ -164,10 +169,46 @@ begin
                         
                         
                        
-                    end if;
+                     end if;
+                     
+                     
                        
 -------------------------------------------------------------------------------------------------------------
                         --END OF LEAD----------------------------------------------------
+                     ---begining of fraction
+                     
+                     if x_final > 0 then
+                        y_start := x_final;
+                        y_new :=  '0' & y_start;
+                        frac(0) := '1';
+                         y_new2 := y_new;
+                     
+                        for j in 1 to 19 loop
+                       -- if j = 1 then
+                      --  y_new2 := y_new;
+                       -- end if;
+                        
+                           -- x_final_test <= y_new2;
+
+                            y_multiplied := (y_new2 * y_new2);
+                          --  y_multiplied_sig <= y_multiplied;
+                            y_shifted1 := y_multiplied(47 downto 22);
+                            --y_new3 :=  y_shifted1;
+                            y_shifted1_int := to_integer(y_shifted1);
+                            y_shifted2 := y_shifted1_int / (2**22);
+                            
+                                if y_shifted2 >= 2 then                                
+                                    
+                                    frac_shifted(-j) := '1';
+                                    frac_sum := frac_shifted;-- +frac_sum;
+                                    frac_shifted(-j) := '0';
+                                    --frac_sig <= frac_sum;  
+                                    y_new2 := y_shifted1 / 2;
+                                else y_new2 := y_shifted1;      
+                                end if;
+                        end loop;
+                        
+                     end if;
                      
             end if;
 

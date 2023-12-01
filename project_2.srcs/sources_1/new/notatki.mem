@@ -1,18 +1,22 @@
-                        if x_final > 0 then
-                               y_start_i := to_integer(unsigned(x_final));
+       if x_final > 0 then
+                               y_start:= x_final;
                                frac(0) := '1';
                               
-                               y_new(47 downto 0) := y_start;
-                                 x_final_test <= y_new(47 downto 0);
+                                y_new := y_start;
+                                 x_final_test <= y_new;
                              
                                for j in 1 to 19 loop
-                                   y_shifted := shift_right(y_new, 22); --x = x/div
-                                   y_test <= y_shifted;
-                                   y_multiplied := y_shifted * y_new; -- python: x=math.floor(x*x/div)
-                                   y_new := y_multiplied(72 downto 0);
-                                   y_divided_long := shift_right(y_new,22);
-                                   y_divided := y_divided_long(47 downto 0);
+                                   y_multiplied := y_new * y_new; -- python: x=math.floor(x*x/div)
+                                   y_multi_shifted := shift_right(y_multiplied, 22); --x = x/div
+                                   --y_test <= y_shifted;
+                                   y_shifted := y_multi_shifted(73 downto 0);
+                                   y_new1 := y_shifted(72 downto 0);
+                                   y_divided := shift_right(y_new1,22);
+                                   --y_divided := y_divided_long(47 downto 0);
+                                   
                                    if y_divided >= y_two then
+                                   y_test <= (others=> '1');
+
                                        --calculate the fractional part
                                         frac_shifted := shift_right(frac, j);
                                         frac_sum := frac_sum + frac_shifted;
@@ -21,3 +25,40 @@
                                         --end of calculation
                                     end if;
                                end loop;
+                             --  l2_and_frac := l2_u + frac_sum;
+                               o_data_frac_test <= frac_sum;
+                               --o_data_total(-1 downto -19) <= frac_sum;
+                        end if;
+                                       variable y_start : unsigned(22 downto 0);
+        variable y_new: unsigned(22 downto 0);
+        variable y_multiplied : unsigned(45 downto 0);  
+        variable y_shifted : unsigned(22 downto 0);
+        variable y_two : unsigned(1 downto 0) := "10";
+                                                       if x_final > 0 then
+                               y_start_i := to_integer(unsigned(x_final));
+                               frac(0) := '1';
+                              
+                               y_new_i := y_start_i;
+                                 --x_final_test <= y_new(47 downto 0);
+                             
+                               for j in 1 to 19 loop
+                                   y_shifted_i := y_new_i / (2**22); --x = x/div
+                                   --y_test <= y_shifted;
+                                   y_multiplied_i := y_shifted_i * y_new_i; -- python: x=math.floor(x*x/div)
+                                   y_new_i := y_multiplied_i;
+                                   --y_divided_long := shift_right(y_new,22);
+                                   y_divided_i := y_new_i / (2**22);
+                                   if y_divided_i >= 2 then
+                                       y_test <= (others=> '1');
+                                       --calculate the fractional part
+                                        frac_shifted := shift_right(frac, j);
+                                        frac_sum := frac_sum + frac_shifted;
+                                        frac_sig <= frac_sum;
+                                        y_new_i := y_new_i / 2;
+                                        --end of calculation
+                                    end if;
+                               end loop;
+                             --  l2_and_frac := l2_u + frac_sum;
+                               o_data_frac_test <= frac_sum;
+                               --o_data_total(-1 downto -19) <= frac_sum;
+                        end if;
