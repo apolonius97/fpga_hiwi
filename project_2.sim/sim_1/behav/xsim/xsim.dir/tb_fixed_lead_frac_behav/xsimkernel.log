@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_fixed_lead_frac_behav/xsimk -simmode gui -wdb tb_fixed_lead_frac_behav.wdb -simrunnum 0 -socket 42705
+Design successfully loaded
+Design Loading Memory Usage: 29136 KB (Peak: 29720 KB)
+Design Loading CPU Usage: 60 ms

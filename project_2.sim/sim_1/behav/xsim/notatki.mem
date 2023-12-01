@@ -1,0 +1,22 @@
+    type unsigned_array is array (natural range <>) of unsigned(47 downto 0);
+    signal x_array : unsigned_array(1 to 23);
+
+
+for  1  the value is  (0, 5) 0.1
+for  2  the value is  (0, 25) 0.01
+for  3  the value is  (0, 125) 0.001
+for  4  the value is  (0, 0625) 0.0101
+for  5  the value is  (0, 3125) 0.0101
+for  6  the value is  (0, 15625) 0.00101
+for  7  the value is  (0, 78125) 0.11001
+for  8  the value is  (0, 390625) 0.011001
+for  9  the value is  (0, 1953125) 0.0011001
+for  10  the value is  (0, 9765625) 0.1111101
+for  11  the value is  (0, 48828125) 0.01111101
+for  12  the value is  (0, 244140625) 0.001111101
+for  13  the value is  (0, 1220703125) 0.0001111101
+for  14  the value is  (0, 6103515625) 0.1001110001
+for  15  the value is  (0, 30517578125) 0.01001110001
+for  16  the value is  (0, 152587890625) 0.001001110001
+for  17  the value is  (0, 762939453125) 0.110000110101
+for  18  the value is  (0, 3814697265625) 0.0110000110101

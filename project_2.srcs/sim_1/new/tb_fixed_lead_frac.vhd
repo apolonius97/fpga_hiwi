@@ -46,6 +46,7 @@ architecture test of tb_fixed_lead_frac is
     signal o_data : integer;
     signal o_data_total : ufixed(4 downto -19);
     signal o_data_test : ufixed(4 downto 0);
+    signal o_data_frac_test : ufixed(-1 downto -19);
 
 
 
@@ -59,38 +60,41 @@ begin
             i_data => i_data,
             o_data => o_data,
             o_data_total => o_data_total,
-            o_data_test => o_data_test
+            o_data_test => o_data_test,
+            o_data_frac_test => o_data_frac_test
         );
     
     stimulus:
     process begin
        
       wait until (rst = '1');
-      i_data <= "000000000000001110000001";
+     i_data <= "000000000000001110000001";
       wait for 30ns;
-      i_data <= "111111111111111110001000";
+     i_data <= "111111111111111110001000";
       wait for 30ns;
-      --wait for 30ns;
+      i_data <= "100000000000000000000000";
+      wait for 30ns;
+      wait for 30ns;
         i_data <= "000000000000000001111000";
 
     wait for 30ns;
 
-      --wait for 30ns;
+     wait for 30ns;
         i_data <= "000011110000000001111000";
 
-    wait for 30ns;
-          --wait for 30ns;
-        i_data <= "001000000000000001111000";
+  wait for 30ns;
+          wait for 30ns;
+       i_data <= "001000000000000001111000";
 
 
-        wait for 30ns;
+     wait for 30ns;
 
-      --wait for 30ns;
-        i_data <= "000011110000000001111000";
-        wait for 30ns;
-        i_data <= "011000000000000001111000";
+      wait for 30ns;
+      i_data <= "000011110000000001111000";
+       wait for 30ns;
+     i_data <= "011000000000000001111000";
 
-   wait for 30ns;
+  wait for 30ns;
     end process stimulus;
 
 

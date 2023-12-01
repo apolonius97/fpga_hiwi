@@ -1,6 +1,6 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -14,6 +14,6 @@ Compiling package ieee.numeric_std
 Compiling package ieee.fixed_float_types
 Compiling package ieee.fixed_pkg
 Compiling package ieee.math_real
-Compiling architecture rtl of entity xil_defaultlib.signed_lead_count_log2 [signed_lead_count_log2_default]
-Compiling architecture test of entity xil_defaultlib.tb_signed_lead_count_log2
-Built simulation snapshot tb_signed_lead_count_log2_behav
+Compiling architecture rtl of entity xil_defaultlib.fixed_lead_frac [fixed_lead_frac_default]
+Compiling architecture test of entity xil_defaultlib.tb_fixed_lead_frac
+Built simulation snapshot tb_fixed_lead_frac_behav

@@ -1,0 +1,23 @@
+                        if x_final > 0 then
+                               y_start_i := to_integer(unsigned(x_final));
+                               frac(0) := '1';
+                              
+                               y_new(47 downto 0) := y_start;
+                                 x_final_test <= y_new(47 downto 0);
+                             
+                               for j in 1 to 19 loop
+                                   y_shifted := shift_right(y_new, 22); --x = x/div
+                                   y_test <= y_shifted;
+                                   y_multiplied := y_shifted * y_new; -- python: x=math.floor(x*x/div)
+                                   y_new := y_multiplied(72 downto 0);
+                                   y_divided_long := shift_right(y_new,22);
+                                   y_divided := y_divided_long(47 downto 0);
+                                   if y_divided >= y_two then
+                                       --calculate the fractional part
+                                        frac_shifted := shift_right(frac, j);
+                                        frac_sum := frac_sum + frac_shifted;
+                                        frac_sig <= frac_sum;
+                                        y_new := shift_right(y_new,2);
+                                        --end of calculation
+                                    end if;
+                               end loop;
