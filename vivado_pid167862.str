@@ -37624,3 +37624,57 @@ selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fixed_l
 // TclEventType: WAVEFORM_UPDATE_WAVEFORM
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "notatki.mem", 0); // o
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb_fixed_lead_frac.vhd", 2); // o
+// Elapsed time: 36 seconds
+selectCodeEditor("tb_fixed_lead_frac.vhd", 729, 502); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "fixed_lead_frac.vhd", 1); // o
+// Elapsed time: 81 seconds
+selectCodeEditor("fixed_lead_frac.vhd", 408, 371); // ac
+// Elapsed time: 89 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "notatki.mem", 0); // o
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No"); // a
+dismissDialog("Text Changed"); // h
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RELAUNCH
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: relaunch_sim 
+// Tcl Message: Command: launch_simulation -step compile -simset sim_1 -mode behavioral 
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim' 
+// Tcl Message: xvhdl --incr --relax -prj tb_fixed_lead_frac_vhdl.prj 
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '2' seconds 
+// Tcl Message: Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral 
+// Tcl Message: INFO: [Vivado 12-12493] Simulation top is 'tb_fixed_lead_frac' 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim' 
+// Tcl Message: xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+// Tcl Message: Vivado Simulator v2022.2 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved. Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log  Using 8 slave threads. Starting static elaboration ERROR: [VRFC 10-666] expression has 26 elements; expected 24 [/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd:207] ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit tb_fixed_lead_frac in library work failed. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-99] Step results log file:'/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' 
+// Tcl Message: ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/elaborate.log' file for more information. ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation. 
+// Tcl Message: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.  
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.   
+// HOptionPane Error: 'ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.   (Relaunch Simulation)'
+// 'a' command handler elapsed time: 5 seconds
+// Elapsed time: 10 seconds
+selectButton(PAResourceCommand.PACommandNames_SIMULATION_RELAUNCH, "simulation_relaunch"); // B
+selectButton("OptionPane.button", "OK"); // JButton
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,944 MB. GUI used memory: 123 MB. Current time: 12/1/23, 4:43:44 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,944 MB. GUI used memory: 123 MB. Current time: 12/1/23, 1:20:31 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 32360 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+// HMemoryUtils.trashcanNow. Engine heap size: 3,936 MB. GUI used memory: 122 MB. Current time: 12/2/23, 3:04:15 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,936 MB. GUI used memory: 122 MB. Current time: 12/2/23, 3:34:17 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,936 MB. GUI used memory: 121 MB. Current time: 12/2/23, 4:04:17 PM CET
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 3,936 MB. GUI used memory: 121 MB. Current time: 12/2/23, 4:34:17 PM CET

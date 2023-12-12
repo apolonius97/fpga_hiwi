@@ -1,7 +1,7 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_fixed_lead_frac_behav xil_defaultlib.tb_fixed_lead_frac -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_signed_lead_count_log2_behav xil_defaultlib.tb_signed_lead_count_log2 -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-666] expression has 26 elements; expected 24 [/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/fixed_lead_frac.vhd:207]
-ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit tb_fixed_lead_frac in library work failed.
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
