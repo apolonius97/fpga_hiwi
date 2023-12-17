@@ -6,6 +6,7 @@ vhdl2008 xil_defaultlib  \
 
 vhdl xil_defaultlib  \
 "../../../../project_2.srcs/sources_1/new/lut_powers.vhd" \
+"../../../../project_2.srcs/sources_1/new/pd_controller.vhd" \
 
 vhdl2008 xil_defaultlib  \
 "../../../../project_2.srcs/sim_1/new/tb_signed_lead_count_log2.vhd" \
