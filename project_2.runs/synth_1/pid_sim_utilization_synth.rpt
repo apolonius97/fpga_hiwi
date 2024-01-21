@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Sun Dec 17 18:56:17 2023
+| Date         : Sun Jan 21 21:34:48 2024
 | Host         : antonina-PC running 64-bit Ubuntu 22.04.3 LTS
 | Command      : report_utilization -file pid_sim_utilization_synth.rpt -pb pid_sim_utilization_synth.pb
 | Design       : pid_sim

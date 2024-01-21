@@ -1,0 +1,289 @@
+/*
+
+Xilinx Vivado v2022.2 (64-bit) [Major: 2022, Minor: 2]
+SW Build: 3671981 on Fri Oct 14 04:59:54 MDT 2022
+IP Build: 3669848 on Fri Oct 14 08:30:02 MDT 2022
+
+Process ID (PID): 60720
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sun Jan 21 18:28:08 CET 2024
+Time zone: 	Central European Standard Time (Europe/Berlin)
+
+OS: Ubuntu
+OS Version: 6.5.0-14-generic
+OS Architecture: amd64
+Available processors (cores): 16
+
+Display: 0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/tools/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9
+Java executable: 	/tools/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	antonina
+User home directory: /home/antonina
+User working directory: /home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2022.2
+RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2022.2/bin
+
+Vivado preferences file: /home/antonina/.Xilinx/Vivado/2022.2/vivado.xml
+Vivado preferences directory: /home/antonina/.Xilinx/Vivado/2022.2/
+Vivado layouts directory: /home/antonina/.Xilinx/Vivado/2022.2/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2022.2/lib/classes/planAhead.jar
+Vivado log file: 	/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/vivado.log
+Vivado journal file: 	/home/antonina/Desktop/fpga_hiwi/project_2.sim/sim_1/behav/xsim/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-60720-antonina-PC
+
+Xilinx Environment Variables
+----------------------------
+RDI_APPROOT: /tools/Xilinx/Vivado/2022.2
+RDI_BASEROOT: /tools/Xilinx/Vivado
+RDI_BINROOT: /tools/Xilinx/Vivado/2022.2/bin
+RDI_BUILD: yes
+RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data
+RDI_INSTALLROOT: /tools/Xilinx
+RDI_INSTALLVER: 2022.2
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 11.0.11_9
+RDI_LIBDIR: /tools/Xilinx/Vivado/2022.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vivado/2022.2/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /tools/Xilinx/Vitis/2022.2/bin:/tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64
+RDI_PROG: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/vivado
+RDI_TPS_ROOT: /tools/Xilinx/Vivado/2022.2/tps/lnx64
+RDI_USE_JDK11: True
+XILINX: /tools/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2022.2/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2022.2
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2022.2
+XILINX_SDK: /tools/Xilinx/Vitis/2022.2
+XILINX_VITIS: /tools/Xilinx/Vitis/2022.2
+XILINX_VIVADO: /tools/Xilinx/Vivado/2022.2
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2022.2
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,115 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/antonina/Desktop/fpga_hiwi/project_2.xpr", 0); // b.a
+// Opening Vivado Project: /home/antonina/Desktop/fpga_hiwi/project_2.xpr. Version: Vivado v2022.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project /home/antonina/Desktop/fpga_hiwi/project_2.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,178 MB. GUI used memory: 60 MB. Current time: 1/21/24, 6:28:09 PM CET
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/antonina/Desktop/fpga_hiwi/project_2.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/antonina/Desktop/fpga_hiwi/project_2.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 85 MB (+86784kb) [00:00:16]
+// [Engine Memory]: 1,348 MB (+1262524kb) [00:00:16]
+// [Engine Memory]: 1,476 MB (+63180kb) [00:00:17]
+// WARNING: HEventQueue.dispatchEvent() is taking  2800 ms.
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'. 
+// [GUI Memory]: 108 MB (+19970kb) [00:00:18]
+// Tcl Message: open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:10 . Memory (MB): peak = 6743.691 ; gain = 372.371 ; free physical = 20981 ; free virtual = 28980 
+// Project name: project_2; location: /home/antonina/Desktop/fpga_hiwi; part: xc7z010clg400-1
+// Elapsed time: 11 seconds
+dismissDialog("Open Project"); // bq
+// [GUI Memory]: 131 MB (+17982kb) [00:00:24]
+// [Engine Memory]: 1,555 MB (+5624kb) [00:00:24]
+// Elapsed time: 917 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pid_sim(Behavioral) (pd_controller.vhd)]", 1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pid_sim(Behavioral) (pd_controller.vhd)]", 1, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1662 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pid_sim(Behavioral) (pd_controller.vhd)]", 1, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pid_sim(Behavioral) (pd_controller.vhd)]", 1, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Source Node Properties..."); // ao
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+// HMemoryUtils.trashcanNow. Engine heap size: 1,569 MB. GUI used memory: 78 MB. Current time: 1/21/24, 6:58:09 PM CET
+// [GUI Memory]: 138 MB (+485kb) [00:52:55]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,569 MB. GUI used memory: 71 MB. Current time: 1/21/24, 7:28:09 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,570 MB. GUI used memory: 68 MB. Current time: 1/21/24, 7:58:09 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,570 MB. GUI used memory: 67 MB. Current time: 1/21/24, 8:28:09 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,570 MB. GUI used memory: 67 MB. Current time: 1/21/24, 8:58:09 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,570 MB. GUI used memory: 67 MB. Current time: 1/21/24, 9:28:09 PM CET
+// Elapsed time: 10177 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 8); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 9); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, pid_sim(Behavioral) (pd_controller.vhd)]", 14, false); // D
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Create Block Design]", 6, false); // f
+// Run Command: PAResourceCommand.PACommandNames_CREATE_NEW_DIAGRAM
+setText(PAResourceAtoD.CreateNewDiagramDialog_DESIGN_NAME, "pid_block", true); // Q
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'O' command handler elapsed time: 5 seconds
+dismissDialog("Create Block Design"); // au
+// TclEventType: LOAD_FEATURE
+// Tcl Message: create_bd_design "pid_block" 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Wrote  : </home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/bd/pid_block/pid_block.bd>  
+// TclEventType: RSB_OPEN_DIAGRAM
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // t
+dismissDialog("Create Block Design"); // bq
+// HMemoryUtils.trashcanNow. Engine heap size: 1,581 MB. GUI used memory: 72 MB. Current time: 1/21/24, 9:33:44 PM CET
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 513, 121, 1136, 543, false, false, false, true, false); // fK - Popup Trigger
+closeFrame(PAResourceOtoP.PAViews_SYSTEM_HIERARCHY, "Design"); // R
+closeFrame(PAResourceOtoP.PAViews_SIGNALS, "Signals"); // R
+closeFrame(PAResourceOtoP.PAViews_BOARD_COMPONENTS, "Board"); // R
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pid_block (pid_block.bd)]", 1, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ao
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", true); // f: TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // U
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/bd/pid_block/pid_block.bd] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: remove_files  /home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/bd/pid_block/pid_block.bd 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: file delete -force /home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/bd/pid_block file delete -force /home/antonina/Desktop/fpga_hiwi/project_2.gen/sources_1/bd/pid_block 
+dismissDialog("Remove Sources"); // bq
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pid_sim(Behavioral) (pd_controller.vhd)]", 2, false); // D
+// [Engine Memory]: 1,650 MB (+17557kb) [03:06:01]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,650 MB. GUI used memory: 125 MB. Current time: 1/21/24, 9:33:59 PM CET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // f - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Elaborate Design"); // u
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7z010clg400-1 Top: pid_sim 
+// TclEventType: ELABORATE_START
+// TclEventType: ELABORATE_FINISH
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,490 MB. GUI used memory: 75 MB. Current time: 1/21/24, 9:34:14 PM CET
+// [Engine Memory]: 2,494 MB (+798131kb) [03:06:16]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  1330 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z010clg400-1 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 7490.539 ; gain = 350.828 ; free physical = 18276 ; free virtual = 27346 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'pid_sim' [/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/pd_controller.vhd:50] INFO: [Synth 8-256] done synthesizing module 'pid_sim' (0#1) [/home/antonina/Desktop/fpga_hiwi/project_2.srcs/sources_1/new/pd_controller.vhd:50] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7575.008 ; gain = 435.297 ; free physical = 18367 ; free virtual = 27442 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7589.852 ; gain = 450.141 ; free physical = 18367 ; free virtual = 27442 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7589.852 ; gain = 450.141 ; free physical = 18367 ; free virtual = 27442 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7589.852 ; gain = 0.000 ; free physical = 18362 ; free virtual = 27437 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7731.629 ; gain = 0.000 ; free physical = 18267 ; free virtual = 27356 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 7782.930 ; gain = 643.219 ; free physical = 18121 ; free virtual = 27212 
+// Tcl Message: 6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 7782.930 ; gain = 887.531 ; free physical = 18121 ; free virtual = 27212 
+// 'dD' command handler elapsed time: 16 seconds
+// Elapsed time: 13 seconds
+dismissDialog("Open Elaborated Design"); // bq
+// [GUI Memory]: 158 MB (+13526kb) [03:06:20]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 19, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/antonina/Desktop/fpga_hiwi/project_2.srcs/utils_1/imports/synth_1/fixed_lead_frac.dcp with file /home/antonina/Desktop/fpga_hiwi/project_2.runs/synth_1/pid_sim.dcp 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Sun Jan 21 21:34:20 2024] Launched synth_1... Run output will be captured here: /home/antonina/Desktop/fpga_hiwi/project_2.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // j
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 37 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Synthesis Completed"); // S.a
+// Elapsed time: 144 seconds
+selectCodeEditor("pd_controller.vhd", 273, 426); // ac
+typeControlKey((HResource) null, "pd_controller.vhd", 'c'); // ac
+// Elapsed time: 33 seconds
+selectCodeEditor("pd_controller.vhd", 339, 457); // ac
+// [GUI Memory]: 167 MB (+1245kb) [03:18:29]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,544 MB. GUI used memory: 105 MB. Current time: 1/21/24, 10:04:14 PM CET
+// Elapsed time: 2667 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pd_controller.vhd", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // R
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pd_controller.vhd", 1); // o
+// HMemoryUtils.trashcanNow. Engine heap size: 2,545 MB. GUI used memory: 102 MB. Current time: 1/21/24, 10:34:15 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,545 MB. GUI used memory: 102 MB. Current time: 1/21/24, 11:04:15 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,545 MB. GUI used memory: 101 MB. Current time: 1/21/24, 11:34:15 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 102 MB. Current time: 1/22/24, 12:04:15 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 101 MB. Current time: 1/22/24, 12:34:15 AM CET
